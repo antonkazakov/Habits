@@ -1,0 +1,2 @@
+include ':app', ':sources:core', ':sources:network', ':sources:main', ':sources:launcher'
+rootProject.name='Habits'

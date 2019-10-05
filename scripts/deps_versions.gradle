@@ -1,0 +1,7 @@
+ext{
+    retrofitVersion = '2.6.1'
+    jsr330Version = '1'
+
+    retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
+    jsr330 = "javax.inject:javax.inject:$jsr330Version"
+}
