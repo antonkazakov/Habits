@@ -1,7 +1,13 @@
-ext{
+ext {
     retrofitVersion = '2.6.1'
     jsr330Version = '1'
+    daggerVersion = '2.24'
+    roomVersion = "2.1.0"
 
     retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
     jsr330 = "javax.inject:javax.inject:$jsr330Version"
+    dagger = "com.google.dagger:dagger:$daggerVersion"
+    daggerCompiler = "com.google.dagger:dagger-compiler:$daggerVersion"
+    room = "androidx.room:room-runtime:$roomVersion"
+    roomCompiler = "androidx.room:room-compiler:$roomVersion"
 }

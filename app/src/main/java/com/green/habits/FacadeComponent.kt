@@ -1,8 +1,8 @@
 package com.green.habits
 
 import android.app.Application
-import com.green.core.mediator.AppProvider
-import com.green.core.mediator.ProvidersFacade
+import com.green.coreapi.mediator.AppProvider
+import com.green.coreapi.mediator.ProvidersFacade
 import dagger.Component
 
 @Component(

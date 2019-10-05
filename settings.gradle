@@ -1,2 +1,4 @@
-include ':app', ':sources:core', ':sources:network', ':sources:main', ':sources:launcher'
-rootProject.name='Habits'
+include ':app', ':sources:coreapi', ':sources:network', ':sources:core_impl', ':sources:core',
+        ':sources:main', ':sources:launcher',
+        ':sources:splash', ':sources:create_habit'
+rootProject.name = 'Habits'

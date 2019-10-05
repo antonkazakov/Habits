@@ -1,8 +1,8 @@
 package com.green.habits
 
 import android.app.Application
-import com.green.core.mediator.ProvidersFacade
-import com.green.core.mediator.AppFacade
+import com.green.coreapi.mediator.ProvidersFacade
+import com.green.coreapi.mediator.AppFacade
 
 class App : Application(), AppFacade {
 

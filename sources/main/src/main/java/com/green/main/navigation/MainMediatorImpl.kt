@@ -1,7 +1,7 @@
 package com.green.main.navigation
 
 import android.content.Context
-import com.green.core.mediator.MainMediator
+import com.green.coreapi.mediator.MainMediator
 import javax.inject.Inject
 
 class MainMediatorImpl

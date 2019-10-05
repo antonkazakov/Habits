@@ -1,7 +1,7 @@
 package com.green.habits
 
 import android.app.Application
-import com.green.core.mediator.AppProvider
+import com.green.coreapi.mediator.AppProvider
 import dagger.Component
 import dagger.BindsInstance
 

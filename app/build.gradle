@@ -35,10 +35,11 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-    implementation project(':sources:core')
+    implementation project(':sources:coreapi')
     implementation project(':sources:main')
+    implementation project(':sources:splash')
     implementation retrofit
 
-    implementation 'com.google.dagger:dagger:2.24'
-    kapt 'com.google.dagger:dagger-compiler:2.24'
+    implementation dagger
+    kapt daggerCompiler
 }
