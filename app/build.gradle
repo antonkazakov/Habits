@@ -42,6 +42,5 @@ dependencies {
 
     implementation dagger
     kapt daggerCompiler
-
     implementation project(':sources:home')
 }

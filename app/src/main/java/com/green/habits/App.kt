@@ -2,9 +2,9 @@ package com.green.habits
 
 import android.app.Application
 import com.green.coreapi.mediator.ProvidersFacade
-import com.green.coreapi.mediator.AppFacade
+import com.green.coreapi.mediator.AppWithFacade
 
-class App : Application(), AppFacade {
+class App : Application(), AppWithFacade {
 
     companion object {
 
@@ -12,7 +12,7 @@ class App : Application(), AppFacade {
 
     }
 
-    override fun getProvider(): ProvidersFacade {
+    override fun getFacade(): ProvidersFacade {
         return facadeComponent ?: FacadeComponent.init(this).also {
             facadeComponent = it
         }
@@ -20,6 +20,6 @@ class App : Application(), AppFacade {
 
     override fun onCreate() {
         super.onCreate()
-        (getProvider() as FacadeComponent)
+        (getFacade() as FacadeComponent)
     }
 }
