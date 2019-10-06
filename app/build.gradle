@@ -38,6 +38,7 @@ dependencies {
     implementation project(':sources:core_api')
     implementation project(':sources:main')
     implementation project(':sources:splash')
+    implementation project(':sources:create_habit')
     implementation retrofit
 
     implementation dagger

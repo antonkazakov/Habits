@@ -5,4 +5,6 @@ interface MediatorsProvider {
     fun provideMainMediator(): MainMediator
 
     fun provideHomeMediator(): HomeMediator
+
+    fun provideCreateHabitMediator(): CreateHabitMediator
 }

@@ -37,4 +37,5 @@ dependencies {
     implementation project(':sources:core_api')
     implementation dagger
     kapt daggerCompiler
+    implementation 'com.google.android.material:material:1.0.0'
 }
