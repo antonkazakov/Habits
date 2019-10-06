@@ -41,6 +41,6 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
 
-    implementation project(':sources:coreapi')
+    implementation project(':sources:core_api')
     implementation jsr330
 }
