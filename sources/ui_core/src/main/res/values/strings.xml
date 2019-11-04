@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ui_core</string>
+
+    <string-array name="days">
+        <item>пн</item>
+        <item>вт</item>
+        <item>ср</item>
+        <item>чт</item>
+        <item>пт</item>
+        <item>сб</item>
+        <item>вс</item>
+    </string-array>
+</resources>

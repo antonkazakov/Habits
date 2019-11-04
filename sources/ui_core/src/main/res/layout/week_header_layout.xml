@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/buttonMonday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/week_header_day_selector"
+        android:gravity="center"
+        android:textAppearance="@style/TextSmall" />
+
+    <Button
+        android:id="@+id/buttonTuesday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/week_header_day_selector"
+        android:gravity="center"
+        android:textAppearance="@style/TextSmall" />
+
+    <Button
+        android:id="@+id/buttonWednesday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/week_header_day_selector"
+        android:gravity="center"
+        android:textAppearance="@style/TextSmall" />
+
+    <Button
+        android:id="@+id/buttonThursday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/week_header_day_selector"
+        android:gravity="center"
+        android:textAppearance="@style/TextSmall" />
+
+    <Button
+        android:id="@+id/buttonFriday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/week_header_day_selector"
+        android:gravity="center"
+        android:textAppearance="@style/TextSmall" />
+
+    <Button
+        android:id="@+id/buttonSaturday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/week_header_day_selector"
+        android:gravity="center"
+        android:textAppearance="@style/TextSmall" />
+
+    <Button
+        android:id="@+id/buttonSunday"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@drawable/week_header_day_selector"
+        android:gravity="center"
+        android:textAppearance="@style/TextSmall" />
+</merge>

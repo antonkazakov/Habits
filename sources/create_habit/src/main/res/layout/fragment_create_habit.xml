@@ -5,9 +5,25 @@
     android:layout_height="match_parent"
     tools:context=".CreateHabitFragment">
 
+
     <EditText
         android:id="@+id/createHabitNameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="65dp"
         android:inputType="text" />
+
+
+    <com.green.uicore.WeekHeaderView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"></com.green.uicore.WeekHeaderView>
+
+
+    <com.green.uicore.DotIndicatorView
+        android:id="@+id/test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></com.green.uicore.DotIndicatorView>
+
+
 </com.green.habits.createhabit.CreateFragmentView>

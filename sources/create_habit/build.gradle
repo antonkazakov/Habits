@@ -37,6 +37,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     implementation project(':sources:core_api')
+    implementation project(':sources:ui_core')
     implementation dagger
     kapt daggerCompiler
     implementation room
