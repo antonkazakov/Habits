@@ -4,5 +4,5 @@ import com.green.coreapi.dto.Habit
 
 interface CreateHabitRepository {
 
-    fun createHabit(habit: Habit)
+    suspend fun createHabit(habit: Habit)
 }

@@ -6,10 +6,10 @@ import javax.inject.Singleton
 
 @Singleton
 @Component(
+    modules = [HomeModule::class],
     dependencies = [ProvidersFacade::class]
 )
 interface HomeComponent {
-
 
     companion object {
 

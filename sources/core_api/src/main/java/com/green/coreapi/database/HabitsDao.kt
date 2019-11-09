@@ -9,8 +9,8 @@ import com.green.coreapi.dto.Habit
 interface HabitsDao {
 
     @Query("SELECT * FROM HABITS")
-    fun getHabits(): List<Habit>
+    suspend fun getHabits(): List<Habit>
 
     @Insert
-    fun createHabit(habit: Habit)
+    suspend fun createHabit(habit: Habit)
 }

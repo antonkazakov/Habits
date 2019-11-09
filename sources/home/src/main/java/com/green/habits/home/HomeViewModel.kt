@@ -18,8 +18,9 @@ class HomeViewModel
     /*todo здесь вычитается один день тк апи считает дни начиная с воскресенья. нужно поставить
     галочку в настройках на выбор точки отсчета дней недели
     */
-   private fun getDayOfWeek(): Int {
-        val c = Calendar.getInstance()
+    fun getDayOfWeek(): Int {
+        val c = Calendar.getInstance(Locale("ru", "RU"))
+        c.firstDayOfWeek = Calendar.MONDAY
         c.timeInMillis = System.currentTimeMillis()
         return c.get(Calendar.DAY_OF_WEEK) - 1
     }

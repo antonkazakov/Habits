@@ -1,7 +1,7 @@
 ext {
     retrofitVersion = '2.6.1'
     jsr330Version = '1'
-    daggerVersion = '2.24'
+    daggerVersion = '2.25.2'
     roomVersion = '2.1.0'
     picassoVersion = '2.71828'
     flexLayoutVersion = '1.1.1'

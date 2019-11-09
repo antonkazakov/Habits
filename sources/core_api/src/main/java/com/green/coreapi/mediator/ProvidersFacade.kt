@@ -1,3 +1,5 @@
 package com.green.coreapi.mediator
 
-interface ProvidersFacade : MediatorsProvider
+import com.green.coreapi.database.DatabaseProvider
+
+interface ProvidersFacade : MediatorsProvider, DatabaseProvider, AppProvider

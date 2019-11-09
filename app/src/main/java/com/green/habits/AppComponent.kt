@@ -14,8 +14,16 @@ interface AppComponent : AppProvider {
 
     companion object {
 
-        fun create(application: Application): AppProvider =
-            DaggerAppComponent.builder().application(application.applicationContext).build()
+        private var appComponent: AppProvider? = null
+
+        fun create(application: Application): AppProvider {
+            return appComponent ?: DaggerAppComponent
+                .builder()
+                .application(application.applicationContext)
+                .build().also {
+                    appComponent = it
+                }
+        }
     }
 
     @Component.Builder

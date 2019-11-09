@@ -9,7 +9,7 @@ class CreateHabitRepositoryImpl
     private val habitsDao: HabitsDao
 ) : CreateHabitRepository {
 
-    override fun createHabit(habit: Habit) {
+    override suspend fun createHabit(habit: Habit) {
         habitsDao.createHabit(habit)
     }
 }

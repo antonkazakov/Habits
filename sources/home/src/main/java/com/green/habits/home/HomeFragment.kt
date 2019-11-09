@@ -1,11 +1,13 @@
 package com.green.habits.home
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProviders
+import com.green.coreapi.database.HabitsDao
 import com.green.coreapi.mediator.AppWithFacade
 import com.green.coreapi.mediator.CreateHabitMediator
 import jp.wasabeef.recyclerview.animators.SlideInLeftAnimator
@@ -23,7 +25,7 @@ class HomeFragment : Fragment() {
     lateinit var createHabitMediator: CreateHabitMediator
 
     private val habitsListAdapter = MainHabitListAdapter()
-    private var viewModel: HomeViewModel? = null
+    private lateinit var viewModel: HomeViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,12 @@ class HomeFragment : Fragment() {
             .inject(this)
         viewModel = ViewModelProviders.of(this).get(HomeViewModel::class.java)
     }
+
+    @Inject
+    lateinit var habitsDao: HabitsDao
+
+    @Inject
+    lateinit var context1: Context
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -42,6 +50,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        weekBar.dayClickAction = {
+
+        }
+
+        weekBar.setSelectedDay(viewModel.getDayOfWeek() - 1)
+
+
         habitsListRecycler.addItemDecoration(MainHabitsItemDecorator())
         habitsListRecycler.adapter = habitsListAdapter
         habitsListRecycler.itemAnimator = SlideInLeftAnimator()

@@ -9,7 +9,7 @@ class CreateHabitViewModel
     private val createHabitRepository: CreateHabitRepository
 ) : ViewModel() {
 
-    fun createHabit(habit: Habit) {
+    suspend fun createHabit(habit: Habit) {
         createHabitRepository.createHabit(habit)
     }
 }

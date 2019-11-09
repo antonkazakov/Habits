@@ -40,4 +40,5 @@ dependencies {
     kapt roomCompiler
     implementation dagger
     kapt daggerCompiler
+    implementation "androidx.room:room-ktx:$roomVersion"
 }
