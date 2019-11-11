@@ -4,16 +4,21 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import dagger.Binds
 import dagger.Module
-import dagger.multibindings.Multibinds
+import dagger.Provides
+import javax.inject.Singleton
 
 @Module
-abstract class ViewModelModule {
+class ViewModelModule {
 
-    @Multibinds
-    abstract fun viewModelsHolder(): Map<Class<out ViewModel>, ViewModel>
+    @Provides
+    @Singleton
+    fun viewModelsHolder(): @JvmSuppressWildcards MutableMap<Class<out ViewModel>, ViewModel> {
+        return mutableMapOf()
+    }
 
-    @Binds
-    abstract fun bindsFactory(
-        viewModelFactory: ViewModelFactoryProvider
-    ): ViewModelProvider.Factory
+    @Provides
+    @Singleton
+    fun bindsFactory(map: @JvmSuppressWildcards MutableMap<Class<out ViewModel>, ViewModel>): ViewModelProvider.Factory {
+        return ViewModelFactoryProvider(map)
+    }
 }

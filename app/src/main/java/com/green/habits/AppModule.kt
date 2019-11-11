@@ -1,13 +1,13 @@
 package com.green.habits
 
-import android.app.Application
 import android.content.Context
+import android.content.SharedPreferences
 import dagger.Module
 import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class AppModule {
+abstract class AppModule {
 
     @Module
     companion object {
@@ -17,7 +17,7 @@ class AppModule {
         @JvmStatic
         @Provides
         @Singleton
-        fun provideSharedPreferences(application: Application) =
-            application.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
+        fun provideSharedPreferences(context: Context): SharedPreferences =
+            context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE)
     }
 }

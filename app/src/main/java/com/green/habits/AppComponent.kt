@@ -5,8 +5,9 @@ import android.content.Context
 import com.green.coreapi.mediator.AppProvider
 import dagger.Component
 import dagger.BindsInstance
+import javax.inject.Singleton
 
-
+@Singleton
 @Component(
     modules = [AppModule::class]
 )

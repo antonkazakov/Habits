@@ -1,11 +1,11 @@
-package com.green.habits.home
+package com.green.habits.home.view
 
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.RelativeLayout
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.green.habits.home.R
 import com.green.uicore.Populatable
-import kotlinx.android.synthetic.main.fragment_home.*
 import kotlinx.android.synthetic.main.recommendations_cell_layout.view.*
 
 class RecommendationsCell

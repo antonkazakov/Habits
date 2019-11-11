@@ -1,4 +1,4 @@
-package com.green.habits.home
+package com.green.habits.home.view
 
 import androidx.annotation.LayoutRes
 

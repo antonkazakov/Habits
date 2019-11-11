@@ -1,12 +1,11 @@
-package com.green.habits.home
+package com.green.habits.home.view
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
-import androidx.core.view.ViewCompat
 import androidx.core.view.ViewPropertyAnimatorListener
 import androidx.recyclerview.widget.RecyclerView
+import com.green.habits.home.R
 import jp.wasabeef.recyclerview.animators.holder.AnimateViewHolder
 
 class MainHabitListAdapter : RecyclerView.Adapter<RecyclerView.ViewHolder>() {

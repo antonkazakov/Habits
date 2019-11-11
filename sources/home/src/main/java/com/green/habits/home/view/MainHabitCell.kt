@@ -1,10 +1,10 @@
-package com.green.habits.home
+package com.green.habits.home.view
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.LinearLayout
 import android.widget.RelativeLayout
 import androidx.annotation.DrawableRes
+import com.green.habits.home.R
 import com.green.uicore.Populatable
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.main_habit_cell_layout.view.*

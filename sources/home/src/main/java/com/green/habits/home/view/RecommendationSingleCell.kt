@@ -1,8 +1,7 @@
-package com.green.habits.home
+package com.green.habits.home.view
 
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.RelativeLayout
 import androidx.cardview.widget.CardView
 import com.green.uicore.Populatable
 import kotlinx.android.synthetic.main.recommendation_cell_layout.view.*

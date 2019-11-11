@@ -1,8 +1,9 @@
-package com.green.habits.home
+package com.green.habits.home.view
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.green.habits.home.R
 
 class RecommendationsAdapter : RecyclerView.Adapter<RecommendationsAdapter.RecommendationViewHolder>() {
 
