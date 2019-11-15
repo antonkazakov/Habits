@@ -1,5 +1,6 @@
 package com.green.habits.home.viewmodel
 
+import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
@@ -7,6 +8,7 @@ import androidx.lifecycle.ViewModel
 import javax.inject.Inject
 import com.green.coreapi.database.HabitsDao
 import com.green.coreapi.dto.Habit
+import com.green.coreapi.mediator.CreateHabitMediator
 import com.green.habits.home.R
 import com.green.habits.home.repository.HabitsMemoryCache
 import com.green.habits.home.view.MainHabitModel
@@ -19,7 +21,8 @@ import java.util.*
 class HomeViewModel
 @Inject constructor(
     private val habitsMemoryCache: HabitsMemoryCache,
-    private val habitsDao: HabitsDao
+    private val habitsDao: HabitsDao,
+    private val createHabitMediator: CreateHabitMediator
 ) : ViewModel() {
 
     private val _todayHabits = MutableLiveData<List<Habit>>()
@@ -58,5 +61,9 @@ class HomeViewModel
                 habitsMemoryCache.saveHabit(day, it)
             }
         }
+    }
+
+    fun openCreateHabitScreen(context: Context){
+        createHabitMediator.openCreateHabitScreen(context)
     }
 }

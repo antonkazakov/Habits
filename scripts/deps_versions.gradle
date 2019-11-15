@@ -7,6 +7,7 @@ ext {
     flexLayoutVersion = '1.1.1'
     viewPager2Version = '1.0.0-rc01'
     coroutinesVersion = '1.1.1'
+    materialVersion = '1.1.0-beta02'
 
     retrofit = "com.squareup.retrofit2:retrofit:$retrofitVersion"
     jsr330 = "javax.inject:javax.inject:$jsr330Version"
@@ -17,9 +18,10 @@ ext {
     picasso = "com.squareup.picasso:picasso:$picassoVersion"
     flexLayout = "com.google.android:flexbox:$flexLayoutVersion"
     viewPager2 = "androidx.viewpager2:viewpager2:$viewPager2Version"
-
     coroutinesDependencies = [
             'coroutines_core'   : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion",
             'coroutines_android': "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
     ]
+
+    material = "com.google.android.material:material:$materialVersion"
 }

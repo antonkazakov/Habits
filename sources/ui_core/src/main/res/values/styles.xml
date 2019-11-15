@@ -12,4 +12,16 @@
         <item name="android:textColor">@color/textPrimaryDark</item>
         <item name="android:textSize">20dp</item>
     </style>
+
+    <style name="TextPrimaryDark1" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/lato_regular</item>
+        <item name="android:textColor">@color/textPrimaryDark</item>
+        <item name="android:textSize">18dp</item>
+    </style>
+
+    <style name="TextFat" parent="TextAppearance.AppCompat.Title">
+        <item name="android:fontFamily">@font/lato_bold</item>
+        <item name="android:textColor">@color/textPrimaryDark</item>
+        <item name="android:textSize">16dp</item>
+    </style>
 </resources>

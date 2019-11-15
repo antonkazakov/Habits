@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import kotlinx.android.synthetic.main.fragment_create_habit.*
+import kotlinx.android.synthetic.main.habit_name_input_layout.*
 
 class CreateHabitFragment : Fragment() {
 
@@ -22,12 +23,6 @@ class CreateHabitFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        test.setDotsNumber(2)
-        Handler().postDelayed({ test.updateCounter() }, 2200)
-        Handler().postDelayed({ test.updateCounter() }, 4200)
 
-        Handler().postDelayed({ test.decCounter() }, 6200)
-        Handler().postDelayed({ test.decCounter() }, 8200)
-       // Handler().postDelayed({ test.decCounter() }, 3200)
     }
 }

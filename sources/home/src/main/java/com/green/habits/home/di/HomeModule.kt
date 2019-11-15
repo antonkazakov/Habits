@@ -2,6 +2,7 @@ package com.green.habits.home.di
 
 import androidx.lifecycle.ViewModel
 import com.green.coreapi.database.HabitsDao
+import com.green.coreapi.mediator.CreateHabitMediator
 import com.green.habits.home.viewmodel.HomeViewModel
 import com.green.habits.home.repository.HabitsMemoryCache
 import com.green.habits.home.repository.HabitsMemoryCacheImpl
@@ -26,8 +27,9 @@ abstract class HomeModule {
         fun provideHomeViewModel(
             map: @JvmSuppressWildcards MutableMap<Class<out ViewModel>, ViewModel>,
             habitsMemoryCache: HabitsMemoryCache,
-            habitsDao: HabitsDao
-        ): ViewModel = HomeViewModel(habitsMemoryCache, habitsDao).also {
+            habitsDao: HabitsDao,
+            createHabitMediator: CreateHabitMediator
+        ): ViewModel = HomeViewModel(habitsMemoryCache, habitsDao, createHabitMediator).also {
             map[HomeViewModel::class.java] = it
         }
 

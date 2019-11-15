@@ -1,29 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.green.habits.createhabit.CreateFragmentView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".CreateHabitFragment">
 
-
-    <EditText
-        android:id="@+id/createHabitNameEditText"
+    <com.green.habits.createhabit.CustomInput
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="65dp"
-        android:inputType="text" />
+        android:layout_height="wrap_content" />
 
-
-    <com.green.uicore.WeekHeaderView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="64dp"></com.green.uicore.WeekHeaderView>
-
-
-    <com.green.uicore.DotIndicatorView
-        android:id="@+id/test"
+    <com.green.habits.createhabit.NumberPickerView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"></com.green.uicore.DotIndicatorView>
+        android:layout_height="wrap_content"/>
 
-
-</com.green.habits.createhabit.CreateFragmentView>
+    <com.green.habits.createhabit.RepeatsNumberPickerCell
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

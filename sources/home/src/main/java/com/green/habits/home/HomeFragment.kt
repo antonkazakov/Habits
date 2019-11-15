@@ -58,6 +58,9 @@ class HomeFragment : Fragment() {
             habitsListAdapter.notifyDataSetChanged()
         })
         viewModel.getHabits(1)
+        fab.setOnClickListener{
+            viewModel.openCreateHabitScreen(requireContext())
+        }
     }
 
     private fun initRecycler() {
