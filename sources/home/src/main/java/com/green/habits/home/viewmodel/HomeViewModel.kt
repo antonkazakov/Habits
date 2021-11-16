@@ -5,6 +5,8 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import javax.inject.Inject
 import com.green.coreapi.database.HabitsDao
 import com.green.coreapi.dto.Habit
@@ -19,7 +21,7 @@ import kotlinx.coroutines.launch
 import java.util.*
 
 class HomeViewModel
-@Inject constructor(
+constructor(
     private val habitsMemoryCache: HabitsMemoryCache,
     private val habitsDao: HabitsDao,
     private val createHabitMediator: CreateHabitMediator
@@ -63,7 +65,18 @@ class HomeViewModel
         }
     }
 
-    fun openCreateHabitScreen(context: Context){
+    fun openCreateHabitScreen(context: Context) {
         createHabitMediator.openCreateHabitScreen(context)
+    }
+}
+
+class HomeViewModelFactory @Inject constructor(
+    private val habitsMemoryCache: HabitsMemoryCache,
+    private val habitsDao: HabitsDao,
+    private val createHabitMediator: CreateHabitMediator
+) : ViewModelProvider.Factory {
+
+    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+        return HomeViewModel(habitsMemoryCache, habitsDao, createHabitMediator) as T
     }
 }

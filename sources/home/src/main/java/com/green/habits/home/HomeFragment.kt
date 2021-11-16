@@ -9,7 +9,6 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
 import com.green.coreapi.mediator.AppWithFacade
-import com.green.habits.home.di.EagerTrigger
 import com.green.habits.home.di.HomeComponent
 import com.green.habits.home.view.MainHabitListAdapter
 import com.green.habits.home.view.MainHabitsItemDecorator
@@ -30,9 +29,6 @@ class HomeFragment : Fragment() {
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
-
-    @Inject
-    lateinit var eagerTrigger: EagerTrigger
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
