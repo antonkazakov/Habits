@@ -14,8 +14,7 @@ gen/
 captures/
 
 # Local configuration file (sdk path, etc)
-local.properties
-/gradle.properties
+
 
 # Windows thumbnail db
 Thumbs.db

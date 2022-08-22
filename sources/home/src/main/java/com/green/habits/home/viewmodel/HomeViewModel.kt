@@ -6,11 +6,10 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.ViewModelProviders
 import javax.inject.Inject
 import com.green.coreapi.database.HabitsDao
 import com.green.coreapi.dto.Habit
-import com.green.coreapi.mediator.CreateHabitMediator
+import com.otus.create_habit_api.CreateHabitMediator
 import com.green.habits.home.R
 import com.green.habits.home.repository.HabitsMemoryCache
 import com.green.habits.home.view.MainHabitModel
@@ -76,7 +75,7 @@ class HomeViewModelFactory @Inject constructor(
     private val createHabitMediator: CreateHabitMediator
 ) : ViewModelProvider.Factory {
 
-    override fun <T : ViewModel?> create(modelClass: Class<T>): T {
+    override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return HomeViewModel(habitsMemoryCache, habitsDao, createHabitMediator) as T
     }
 }

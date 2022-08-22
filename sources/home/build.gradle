@@ -3,15 +3,12 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 android {
-    compileSdkVersion 28
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 31
 
 
     defaultConfig {
-        minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion 23
+        targetSdkVersion 31
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles 'consumer-rules.pro'
@@ -37,6 +34,7 @@ dependencies {
     implementation viewPager2
     api project(':sources:core')
     implementation project(':sources:ui_core')
+    implementation project(':create-habit-api')
     implementation dagger
     kapt daggerCompiler
     implementation 'jp.wasabeef:recyclerview-animators:3.0.0'

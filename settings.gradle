@@ -2,3 +2,4 @@ include ':app', ':sources:core_api', ':sources:network', ':sources:core_impl', '
         ':sources:main', ':sources:launcher',
         ':sources:splash', ':sources:create_habit'
 rootProject.name = 'Habits'
+include ':create-habit-api'

@@ -5,11 +5,12 @@ import com.green.coreapi.database.DatabaseProvider
 import com.green.coreapi.mediator.AppProvider
 import com.green.coreapi.mediator.ProvidersFacade
 import com.green.habits.core.CoreProvidersFactory
+import com.green.habits.createhabit.CreateHabitExternalModule
 import dagger.Component
 
 @Component(
     dependencies = [AppProvider::class, DatabaseProvider::class],
-    modules = [MediatorsBindings::class]
+    modules = [MediatorsBindings::class, CreateHabitExternalModule::class]
 )
 interface FacadeComponent : ProvidersFacade {
 
@@ -21,6 +22,4 @@ interface FacadeComponent : ProvidersFacade {
                 .databaseProvider(CoreProvidersFactory.createDatabaseBuilder(AppComponent.create(application)))
                 .build()
     }
-
-    fun inject(app: App)
 }

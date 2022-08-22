@@ -7,12 +7,11 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
-    buildToolsVersion "29.0.2"
+    compileSdkVersion 31
     defaultConfig {
         applicationId "com.green.habits"
-        minSdkVersion 21
-        targetSdkVersion 28
+        minSdkVersion 23
+        targetSdkVersion 31
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
@@ -40,6 +39,7 @@ dependencies {
     implementation project(':sources:main')
     implementation project(':sources:splash')
     implementation project(':sources:create_habit')
+    implementation project(':create-habit-api')
     implementation retrofit
 
     implementation dagger

@@ -19,6 +19,6 @@ class App : Application(), AppWithFacade {
 
     override fun onCreate() {
         super.onCreate()
-        (getFacade() as FacadeComponent).inject(this)
+        getFacade()
     }
 }
